@@ -8,9 +8,15 @@
 		<h1><a href="/">Blog BeStrong</a></h1>
 	</div>
 	<div>
-		<p>Publicações</p>
-		<h2><a href="">Publicado por: Fulano</a></h2>
-		<p>It works!, Podemos tirar do banco de dados as publicações</p>	
+		<!-- AQUI ESTOU COMEÇANDO A UTILIZAR CÓDIGO PYTHON NO HTML PARA USÁ-LO SÓ COLOCAR {}-->
+		{%for post in posts%}
+		<div>
+			<p>Publicação: {{post.published_date}}</p>
+			<h2><a href="">{{post.title}}</a></h2>
+			<!--AQUI PEGAMOS  CONTEUDO DO CAMPO TEXTO, NO LINEBREAKSBR FAZEMOS QUE TODA QUEBRA DE LINHA VIRE PARAGRAFO-->
+			<p>{{ post.text|linebreaksbr }}</p>
+		</div>
+		{%endfor%}
 	</div>
 	
 </body>
