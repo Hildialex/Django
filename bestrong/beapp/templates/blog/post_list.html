@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Be Strong</title>
-</head>
-<body>
-	<div>
-		<h1><a href="/">Blog BeStrong</a></h1>
-	</div>
-	<div>
-		<!-- AQUI ESTOU COMEÇANDO A UTILIZAR CÓDIGO PYTHON NO HTML PARA USÁ-LO SÓ COLOCAR {}-->
-		{%for post in posts%}
-		<div>
-			<p>Publicação: {{post.published_date}}</p>
+{% extends 'beapp/base.html' %}
+{% block content %}
+	<!-- AQUI ESTOU COMEÇANDO A UTILIZAR CÓDIGO PYTHON NO HTML PARA USÁ-LO SÓ COLOCAR {}-->
+	{%for post in posts%}
+		<div class="post">
+			<div class="date">
+				<p>Publicação: {{post.published_date}}</p>
+			</div>
 			<h2><a href="">{{post.title}}</a></h2>
 			<!--AQUI PEGAMOS  CONTEUDO DO CAMPO TEXTO, NO LINEBREAKSBR FAZEMOS QUE TODA QUEBRA DE LINHA VIRE PARAGRAFO-->
 			<p>{{ post.text|linebreaksbr }}</p>
 		</div>
-		{%endfor%}
-	</div>
-	
-</body>
-</html>
+	{%endfor%}
+{% endblock %}
