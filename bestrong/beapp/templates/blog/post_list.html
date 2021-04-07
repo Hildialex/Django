@@ -1,11 +1,11 @@
 
-{% extends 'beapp/base.html' %}
+{% extends 'blog/base.html' %}
 {% block content %}
 		<!-- AQUI ESTOU COMEÇANDO A UTILIZAR CÓDIGO PYTHON NO HTML PARA USÁ-LO SÓ COLOCAR {}-->
 		{%for post in posts%}
 		<div>
 			<p>Publicação: {{post.published_date}}</p>
-			<h2><a href="">{{post.title}}</a></h2>
+			<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
 			<!--AQUI PEGAMOS  CONTEUDO DO CAMPO TEXTO, NO LINEBREAKSBR FAZEMOS QUE TODA QUEBRA DE LINHA VIRE PARAGRAFO-->
 			<p>{{ post.text|linebreaksbr }}</p>
 		</div>
