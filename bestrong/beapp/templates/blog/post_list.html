@@ -1,39 +1,17 @@
-<<<<<<< HEAD
+
 {% extends 'beapp/base.html' %}
 {% block content %}
-	<!-- AQUI ESTOU COMEÇANDO A UTILIZAR CÓDIGO PYTHON NO HTML PARA USÁ-LO SÓ COLOCAR {}-->
-	{%for post in posts%}
-		<div class="post">
-			<div class="date">
-				<p>Publicação: {{post.published_date}}</p>
-			</div>
-=======
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Be Strong</title>
-</head>
-<body>
-	<div>
-		<h1><a href="/">Blog BeStrong</a></h1>
-	</div>
-
 		<!-- AQUI ESTOU COMEÇANDO A UTILIZAR CÓDIGO PYTHON NO HTML PARA USÁ-LO SÓ COLOCAR {}-->
 		{%for post in posts%}
 		<div>
 			<p>Publicação: {{post.published_date}}</p>
->>>>>>> 1515c8e3197935b312597ffefc0d27389195d9fd
 			<h2><a href="">{{post.title}}</a></h2>
 			<!--AQUI PEGAMOS  CONTEUDO DO CAMPO TEXTO, NO LINEBREAKSBR FAZEMOS QUE TODA QUEBRA DE LINHA VIRE PARAGRAFO-->
 			<p>{{ post.text|linebreaksbr }}</p>
 		</div>
-<<<<<<< HEAD
+
 	{%endfor%}
 {% endblock %}
-=======
-		{%endfor%}
 
-	
-</body>
-</html>
->>>>>>> 1515c8e3197935b312597ffefc0d27389195d9fd
+
+
