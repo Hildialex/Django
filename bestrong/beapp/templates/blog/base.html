@@ -22,12 +22,12 @@
 			<nav class="white" role="navigation">
 				<div class="nav-wrapper container">
 					<ul class="right hide-on-med-and-down">
-						<li><a href="/">Fórum</a></li>
-						<li><a href="/">Frases</a></li>
-						<li><a href="/">Doações</a></li>
-						<li><a href="/">Minhas Emoções</a></li>
-						<li><a href="/">Parceiros</a></li>
-						<li><a href="/">Sobre Nós</a></li>
+						<li class="black"><a href="{% url 'index' %}">Fórum</a></li>
+						<li class="black"><a href="/">Frases</a></li>
+						<li class="black"><a href="/">Doações</a></li>
+						<li class="black"><a href="/">Minhas Emoções</a></li>
+						<li class="black"><a href="/">Parceiros</a></li>
+						<li class="black"><a href="/">Sobre Nós</a></li>
 						{% if user.is_authenticated %}
 							<a href="{% url 'post_new' %}" class="top-menu"><i class="material-icons">add</i></a>
 						{% endif %}
